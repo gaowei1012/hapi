@@ -1,4 +1,4 @@
-
+const models = require('./../models');
 const GROUP_NAME = 'shops';
 
 module.exports = [
@@ -6,7 +6,9 @@ module.exports = [
         method: 'GET',
         path: `/${GROUP_NAME}`,
         handler: async (request, reply) => {
-            reply('shops')
+            // 连接数据库 
+            const result = await models.findeAll();
+            reply(result)
         },
         config: {
             tags: ['api', GROUP_NAME],
