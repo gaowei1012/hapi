@@ -12,10 +12,12 @@
   "dependencies": {
     "env2": "^2.2.2",
     "hapi": "16",
+    "hapi-auth-jwt2": "7",
     "hapi-pagination": "^2.0.1",
     "hapi-swagger": "7",
     "inert": "4",
     "joi": "13",
+    "jsonwebtoken": "^8.4.0",
     "mysql2": "^1.6.4",
     "package": "^1.0.1",
     "sequelize": "^4.41.2",
