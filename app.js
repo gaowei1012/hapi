@@ -1,7 +1,8 @@
 const Hapi = require('hapi');
 require('env2')('./.env');
 const pluginHapiSwagger = require('./plugins/hapi-plugin');
-const routesHelloHapi = require('./routes/test-hapi');
+const pluginHapiPagination = require('./plugins/hapi-pagination');
+// const routesHelloHapi = require('./routes/test-hapi');
 const routesOrdersHapi = require('./routes/orders');
 const routesShopsHapi = require('./routes/shops');
 const routesUsersHapi = require('./routes/users');
@@ -17,7 +18,8 @@ const init = async () => {
 
     // 插件
     await server.register([
-        ...pluginHapiSwagger
+        ...pluginHapiSwagger,
+        // pluginHapiPagination
     ]);
 
     // 路由
